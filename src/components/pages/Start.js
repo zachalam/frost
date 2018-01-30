@@ -102,7 +102,7 @@ class Start extends Component {
       <Container>
         <img src={vault} style={{width:'100%'}} />
         <h1>New Wallet</h1>
-        {this.state.seed ? this.renderPassword() : this.renderProgress() }
+        {Boolean(this.state.progress < 100) ? this.renderProgress() : this.renderPassword()}
       </Container>
     );
   }

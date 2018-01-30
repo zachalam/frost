@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import sjcl from 'sjcl'
 
 import { Container, Input, Label, Message, Transition, Button } from 'semantic-ui-react'
-import locked from '../../images/locked.svg'
+import wallet from '../../images/wallet.svg'
 
 import { upload } from '../../common/file'
 
@@ -67,7 +67,7 @@ class Unlock extends Component {
   render() {
     return (
       <Container>
-        <img src={locked} style={{width:'100%'}} />
+        <img src={wallet} style={{width:'100%'}} />
         <h1>Unlock Wallet</h1>
         Gain access to your wallet by providing it here.
         <br /><br />

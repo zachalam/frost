@@ -1,11 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import { Button, Form, Grid, Header, Image, Message, Segment, Icon } from 'semantic-ui-react'
 
-import Routes from './Routes';
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
-
-import logo from '../../images/frost.png';
-
+import Routes from './Routes'
+import logo from '../../images/frost.png'
+import MasterConfig from '../../config/Master'
 
 class App extends Component {
   render() {
@@ -23,7 +22,9 @@ class App extends Component {
                 <Routes />
             </Segment>
           <Message>
-            New to us? <a href='#'>Sign Up</a>
+            <a href={'#'} target="_blank"><Icon name="check circle" />Donate</a>
+            &nbsp; &nbsp;
+            <a href={MasterConfig.github} target="_blank"><Icon name="github" />GitHub</a>
           </Message>
         </Grid.Column>
       </Grid>
