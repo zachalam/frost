@@ -4,7 +4,7 @@ import sjcl from 'sjcl'
 import IOTA from 'iota.lib.js'
 import QRCode from 'qrcode.react'
 
-import { Container, Input, TextArea, Label, Message, Transition, Button } from 'semantic-ui-react'
+import { Container, Input, TextArea, Label, Message, Transition, Button, Tab } from 'semantic-ui-react'
 import locked from '../../images/locked.svg'
 
 import { upload } from '../../common/file'
@@ -17,7 +17,8 @@ class Wallet extends Component {
     super(props);
 
     this.state = {
-      address: ''
+      address: '',
+      showRawSeed: false
     }
 
     this.storeAddress = this.storeAddress.bind(this);
@@ -48,20 +49,47 @@ class Wallet extends Component {
   }
 
   render() {
-    console.log("this state");
-    console.log(this.state);
+
+    const panes = [
+      { menuItem: 'Receive', render: () => {
+
+        return (
+        <div style={{paddingTop:"0.5em"}}>
+          <h1>Receive IOTA</h1>
+          Store your IOTA offline by sending funds to the following address.
+          <QRCode size={225} value={JSON.stringify({address: this.state.address})} />
+          <div>
+          <TextArea key={'address'} disabled style={{width:'100%', height:75}} defaultValue={this.state.address} />
+          <br /><br />
+          <Button
+            href={`https://iotasear.ch/hash/${this.state.address}`}
+            target={'_blank'}>View Balance (Online)</Button>
+          </div>
+        </div>)
+      }},
+
+      { menuItem: 'Seed (Private)', render: () => {
+        return (
+        <div style={{paddingTop:"0.5em"}}>
+          <h1>Decrypted Seed</h1>
+          Import this seed into any IOTA wallet to access your funds.
+          <Message negative>
+          <b>DO NOT SHARE!!</b> Your IOTA can be spent by <u>ANYONE</u> with a copy of your seed.
+          </Message>
+          <div>
+          <TextArea key={'seed'} disabled style={{width:'100%', height:75}}
+          value={this.state.showRawSeed ? window.wallet.seed : '#'.repeat(81)} />
+          <br /><br />
+          <Button
+            onClick={() => {this.setState({showRawSeed:true})}}>I Understand, Show Seed.</Button>
+          </div>
+        </div>)
+      }}
+    ]
+
     return (
       <Container>
-        <h1>Receive IOTA</h1>
-        Store your IOTA offline in a cold storage wallet by sending funds to the following address.
-        <QRCode size={225} value={JSON.stringify({address: this.state.address})} />
-        <div>
-        <TextArea disabled style={{width:'100%', height:75}}>{this.state.address}</TextArea>
-        <br /><br />
-        <Button
-          href={`https://iotasear.ch/hash/${this.state.address}`}
-          target={'_blank'}>View Balance</Button>
-        </div>
+        <Tab panes={panes} />
       </Container>
     )
   }
