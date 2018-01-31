@@ -15,6 +15,7 @@ class Unlock extends Component {
     this.state = {
       showPassword: false,
       decryptFail: false,
+      isLoading: false,
       password: ''
     }
 
@@ -23,7 +24,7 @@ class Unlock extends Component {
   }
 
   importWallet() {
-    this.setState({decryptFail: false});
+    this.setState({decryptFail: false, isLoading: true});
 
     setTimeout(() => {
       try {
@@ -34,7 +35,7 @@ class Unlock extends Component {
         this.props.history.push('/wallet')
       } catch(e) {
         // wrong password.
-        this.setState({decryptFail: true});
+        this.setState({decryptFail: true, isLoading: false});
       }
     },100);
 
@@ -53,9 +54,10 @@ class Unlock extends Component {
         placeholder='Secure Password'
         size='large'
       />
-      <Button color='blue' onClick={() => { this.importWallet() }} fluid size='large'>Open Wallet</Button>
+      <Button color='blue' fluid size='large' loading={this.state.isLoading}
+      onClick={() => { this.importWallet() }}>Open Wallet</Button>
       <a href="#"
-        onClick={(e) => {e.preventDefault(); 
+        onClick={(e) => {e.preventDefault();
         this.setState({showPassword: false, decryptFail: false})}}>import another wallet</a>
 
 

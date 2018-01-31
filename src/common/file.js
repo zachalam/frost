@@ -41,8 +41,6 @@ function upload(label, onUpload, id) {
             onUpload();
           }
 
-          console.log("file got");
-          console.log(file);
           if(file) reader.readAsText(file);
         }}
         ref={input => {
