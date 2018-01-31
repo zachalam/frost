@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "react-scripts": "1.1.0"
   },
+  "homepage": "http://zachalam.github.io/frost",
   "dependencies": {
     "iota.lib.js": "^0.4.7",
     "qrcode.react": "^0.7.2",
@@ -18,6 +20,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
