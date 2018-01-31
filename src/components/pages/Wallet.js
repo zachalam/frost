@@ -1,14 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import sjcl from 'sjcl'
 import IOTA from 'iota.lib.js'
 import QRCode from 'qrcode.react'
-
-import { Container, Input, TextArea, Label, Message, Transition, Button, Tab } from 'semantic-ui-react'
-import locked from '../../images/locked.svg'
-
-import { upload } from '../../common/file'
-
+import { Container, TextArea, Message, Button, Tab } from 'semantic-ui-react'
 var iota = new IOTA({});
 
 class Wallet extends Component {
@@ -74,14 +67,14 @@ class Wallet extends Component {
           <h1>Decrypted Seed</h1>
           Import this seed into any IOTA wallet to access your funds.
           <Message negative>
-          <b>DO NOT SHARE!!</b> Your IOTA can be spent by <u>ANYONE</u> with a copy of your seed.
+            <b>DO NOT SHARE!!</b> Your IOTA can be spent by <u>ANYONE</u> with a copy of your seed.
           </Message>
-          <div>
-          <TextArea key={'seed'} disabled style={{width:'100%', height:75}}
+          <TextArea key={'seed'} disabled style={{width:'100%', height:90}}
           value={this.state.showRawSeed ? window.wallet.seed : '#'.repeat(81)} />
-          <br /><br />
+          <div>
+          <br />
           <Button
-            onClick={() => {this.setState({showRawSeed:true})}}>I Understand, Show Seed.</Button>
+            onClick={() => {this.setState({showRawSeed:true})}}>I Understand, Show Seed</Button>
           </div>
         </div>)
       }}
