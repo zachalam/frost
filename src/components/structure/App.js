@@ -24,6 +24,8 @@ class App extends Component {
           <Message>
             <a href={'#'} target="_blank"><Icon name="check circle" />Donate</a>
             &nbsp; &nbsp;
+            <Link to={"#"}><Icon name="lock" />Security</Link>            
+            &nbsp; &nbsp;
             <a href={MasterConfig.github} target="_blank"><Icon name="github" />GitHub</a>
           </Message>
         </Grid.Column>

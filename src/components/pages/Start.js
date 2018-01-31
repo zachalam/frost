@@ -70,7 +70,7 @@ class Start extends Component {
   renderPassword() {
     return (
       <div>
-        Great! Now enter a <strong>strong</strong> password to encrypt your wallet.
+        Great! Now enter a <strong>{MasterConfig.passLength}+ character</strong> password to encrypt your wallet.
         <br /><br />
         <Input fluid
           onChange={ (e) => {this.setState({password: e.target.value})} }
@@ -82,7 +82,7 @@ class Start extends Component {
         />
         <Button color='blue' fluid size='large'
         onClick={() => { this.exportWallet() }}
-        disabled={!Boolean(this.state.password.length > 5)}>Save Wallet</Button>
+        disabled={!Boolean(this.state.password.length >= MasterConfig.passLength)}>Save Wallet</Button>
       </div>
     )
   }

@@ -45,10 +45,6 @@ class Unlock extends Component {
   renderPassword() {
     return (
       <div>
-      <br /><br />
-      <h3>Enter Password</h3>
-      Type your wallet passphrase.
-      <br /><br />
       <Input fluid
         onChange={ (e) => {this.setState({password: e.target.value})} }
         type='password'
@@ -57,7 +53,10 @@ class Unlock extends Component {
         placeholder='Secure Password'
         size='large'
       />
-      <Button color='blue' onClick={() => { this.importWallet() }} fluid size='large'>Login</Button>
+      <Button color='blue' onClick={() => { this.importWallet() }} fluid size='large'>Open Wallet</Button>
+      <a href="#"
+        onClick={(e) => {e.preventDefault(); 
+        this.setState({showPassword: false, decryptFail: false})}}>import another wallet</a>
 
 
       </div>
@@ -69,10 +68,13 @@ class Unlock extends Component {
       <Container>
         <img src={wallet} style={{width:'100%'}} />
         <h1>Unlock Wallet</h1>
-        Gain access to your wallet by providing it here.
+        Gain access to your wallet and funds by providing it here.
         <br /><br />
-        {upload('Upload Wallet', ()=> { this.setState({showPassword: true}) }, 'wallet')}
-        {this.state.showPassword ? this.renderPassword() : null}
+
+        {this.state.showPassword ?
+          this.renderPassword() :
+          upload('Import Wallet', ()=> { this.setState({showPassword: true}) }, 'wallet') }
+
         {this.state.decryptFail ? <Message warning>Invalid Decryption Password!</Message>: null}
       </Container>
     )
