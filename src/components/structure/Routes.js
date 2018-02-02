@@ -9,7 +9,7 @@ import Wallet from '../pages/Wallet'
 // The Routes component renders one of the routes
 const Routes = () => (
   <main>
-    <Switch>
+    <Switch basename="frost">
       <Route exact path='/' component={Home}/>
       <Route exact path='/start' component={Start}/>
       <Route exact path='/done' component={Done}/>
