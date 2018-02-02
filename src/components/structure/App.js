@@ -10,21 +10,21 @@ class App extends Component {
   render() {
     return (
 
-      <div className='login-form'>
+      <div>
       <Grid
         textAlign='center'
         style={{ height: '100%' }}
         verticalAlign='middle'
       >
-        <Grid.Column style={{ maxWidth: 350 }}>
+        <Grid.Column style={{maxWidth: 350}}>
           <Link to={"/"}><img src={logo} className="App-logo" style={{width:"100%"}} /></Link>
-            <Segment stacked>
+            <Segment stacked={true} style={{padding:'2em'}}>
                 <Routes />
             </Segment>
           <Message>
             <a href={'#'} target="_blank"><Icon name="check circle" />Donate</a>
             &nbsp; &nbsp;
-            <Link to={"#"}><Icon name="lock" />Security</Link>            
+            <Link to={"#"}><Icon name="lock" />Security</Link>
             &nbsp; &nbsp;
             <a href={MasterConfig.github} target="_blank"><Icon name="github" />GitHub</a>
           </Message>

@@ -81,9 +81,9 @@ class Wallet extends Component {
     ]
 
     return (
-      <Container>
+      <div>
         <Tab panes={panes} />
-      </Container>
+      </div>
     )
   }
 

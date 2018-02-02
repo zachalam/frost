@@ -99,11 +99,11 @@ class Start extends Component {
 
   render() {
     return (
-      <Container>
+      <div>
         <img src={stretch} style={{width:'100%'}} alt={'IOTA Vault'} />
         <h1>New Wallet</h1>
         {Boolean(this.state.progress < 100) ? this.renderProgress() : this.renderPassword()}
-      </Container>
+      </div>
     );
   }
 }

@@ -67,7 +67,7 @@ class Unlock extends Component {
 
   render() {
     return (
-      <Container>
+      <div>
         <img src={wallet} style={{width:'100%'}} />
         <h1>Unlock Wallet</h1>
         Gain access to your wallet and funds by providing it here.
@@ -78,7 +78,7 @@ class Unlock extends Component {
           upload('Import Wallet', ()=> { this.setState({showPassword: true}) }, 'wallet') }
 
         {this.state.decryptFail ? <Message warning>Invalid Decryption Password!</Message>: null}
-      </Container>
+      </div>
     )
   }
 

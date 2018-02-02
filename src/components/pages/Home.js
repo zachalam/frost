@@ -8,8 +8,8 @@ import MasterConfig from '../../config/Master'
 const Home = () => (
   <div>
     <img src={vault} style={{width:'100%'}} alt={'IOTA Vault'} />
-
-    Safely store your tokens offline! {MasterConfig.wallet} generates and reads
+    <h1>Hello There!</h1>
+    Safely store your tokens offline. {MasterConfig.wallet} generates and reads
     encrypted {MasterConfig.currency} seeds.
     <div style={{paddingTop:'1em', paddingBottom:'1em'}}>
       <Button.Group>
