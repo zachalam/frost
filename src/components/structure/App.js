@@ -22,7 +22,7 @@ class App extends Component {
                 <Routes />
             </Segment>
           <Message>
-            <a href={'#'} target="_blank"><Icon name="check circle" />Donate</a>
+            <Link to={'/donate'}><Icon name="check circle" />Donate</Link>
             &nbsp; &nbsp;
             <Link to={"#"}><Icon name="lock" />Security</Link>
             &nbsp; &nbsp;
