@@ -67,9 +67,9 @@ class Wallet extends Component {
           <h1>Decrypted Seed</h1>
           Import this seed into any IOTA wallet to access your funds.
           <Message negative>
-            <b>DO NOT SHARE!!</b> Your IOTA can be spent by <u>ANYONE</u> with a copy of your seed.
+            <b>NO SHARING!</b> Your IOTA can be spent by <u>ANYONE</u> with your seed.
           </Message>
-          <TextArea key={'seed'} disabled style={{width:'100%', height:90}}
+          <TextArea key={'seed'} disabled style={{width:'100%', height:75}}
           value={this.state.showRawSeed ? window.wallet.seed : '#'.repeat(81)} />
           <div>
           <br />
