@@ -6,13 +6,13 @@
     "gh-pages": "^1.1.0",
     "react-scripts": "1.1.0"
   },
-  "homepage": "http://zachalam.github.io/frost",
   "dependencies": {
     "iota.lib.js": "^0.4.7",
     "qrcode.react": "^0.7.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
+    "semantic-ui-css": "^2.2.14",
     "semantic-ui-react": "^0.77.2",
     "sjcl": "^1.0.7"
   },
