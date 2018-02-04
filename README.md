@@ -2,7 +2,7 @@
 
 FROST is an open source, cold storage wallet for IOTA. It can run offline, be compiled from source, and requires minimal dependencies.
 
-<iframe src="https://giphy.com/embed/l0NgSuCl5bdQr7KPS" width="336" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+<a href="https://media.giphy.com/media/l0NgSuCl5bdQr7KPS/giphy.gif"><img src="https://media.giphy.com/media/l0NgSuCl5bdQr7KPS/giphy.gif" title="Frost Demo"/></a>
 
 ## Give Frost A Try!
 
