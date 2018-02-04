@@ -2,82 +2,53 @@
 
 FROST is an open source, cold storage wallet for IOTA. It can run offline, be compiled from source, and requires minimal dependencies.
 
-### Prerequisites
+## Give Frost A Try!
 
-What things you need to install the software and how to install them
+Short on time? Run the cold storage wallet directly in your browser. Be sure to disconnect
+from the Internet when generating your encrypted wallet.
+[https://zachalam.github.io/frost/](https://zachalam.github.io/frost/)
 
+### Build From Source
+
+If you're super paranoid (completely fair). You can build frost from source. Here's a quick guide to get up and running locally.
+
+1. Clone the repo from GitHub.
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
-```
-Give the example
+git clone https://github.com/zachalam/frost.git
 ```
 
-And repeat
-
+2. Enter `frost` directory and build.
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
+cd frost
+npm run build
+open index.html
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
-
+3. Enter `build` directory and open in browser.
 ```
-Give an example
+cd build
+open index.html
 ```
 
-## Deployment
+#### That's all! Here's it all together:
+```
+git clone https://github.com/zachalam/frost.git
+cd frost
+npm run build
+cd build
+open index.html
+```
 
-Add additional notes about how to deploy this on a live system
+## Important Notes
 
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* Always disconnect from the Internet when generating/accessing a key.
+* Do not share your encrypted wallet OR seed with anyone.
+* DO NOT SEND FUNDS FROM YOUR ADDRESS MORE THAN ONCE!!!
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+Pull requests are more than welcome.
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
