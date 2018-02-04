@@ -26,10 +26,9 @@ npm run build
 open index.html
 ```
 
-3. Enter `build` directory and open in browser.
+3. Open `build/index.html` in your default browser.
 ```
-cd build
-open index.html
+open build/index.html
 ```
 
 #### That's all! Here's it all together:
@@ -37,8 +36,7 @@ open index.html
 git clone https://github.com/zachalam/frost.git
 cd frost
 npm run build
-cd build
-open index.html
+open build/index.html
 ```
 
 ## Important Notes
