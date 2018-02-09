@@ -21,11 +21,11 @@ class App extends Component {
             <Segment stacked={true} style={{padding:'2em'}}>
                 <Routes />
             </Segment>
-          <Message>
-            <Link to={'/donate'}><Icon name="check circle" />Make A Donation</Link>
+          <div>
+            <Link to={'/donate'}><Icon name="heart" />Donate</Link>
             &nbsp; &nbsp;
             <a href={MasterConfig.github} target="_blank"><Icon name="github" />GitHub</a>
-          </Message>
+          </div>
         </Grid.Column>
       </Grid>
     </div>

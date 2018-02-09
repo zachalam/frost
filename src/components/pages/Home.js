@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
-import { Message, Button } from 'semantic-ui-react'
+import { Icon, Message, Button } from 'semantic-ui-react'
 import vault from '../../images/vault.svg'
 import MasterConfig from '../../config/Master'
 
@@ -40,7 +40,7 @@ class Home extends Component {
           <Button.Or />
           <Button size={"large"} positive as={Link} to='/start'>New Wallet</Button>
         </Button.Group>
-        {this.state.online ? <Message warning><b>Be Safe!</b> Go offline when using.</Message> : null}
+        {this.state.online ? <Message warning><Icon name="alarm" />Go <u>offline</u> before using!</Message> : null}
       </div>
     </div>)
   }
