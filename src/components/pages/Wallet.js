@@ -47,12 +47,12 @@ class Wallet extends Component {
       { menuItem: 'Receive', render: () => {
 
         return (
-        <div style={{paddingTop:"0.5em"}}>
-          <h1>Receive IOTA</h1>
+        <div style={{paddingTop:"1em"}}>
           Store your IOTA offline by sending funds to the following address.
+          <br /><br />
           <QRCode size={225} value={JSON.stringify({address: this.state.address})} />
           <div>
-          <TextArea key={'address'} disabled style={{width:'100%', height:75}} defaultValue={this.state.address} />
+          <TextArea key={'address'} disabled style={{width:'100%', height:75, border:0}} defaultValue={this.state.address} />
           <br /><br />
           <Button
             href={`https://iotasear.ch/hash/${this.state.address}`}
@@ -63,17 +63,17 @@ class Wallet extends Component {
 
       { menuItem: 'Seed (Private)', render: () => {
         return (
-        <div style={{paddingTop:"0.5em"}}>
-          <h1>Decrypted Seed</h1>
+        <div style={{paddingTop:"1em"}}>
           Import this seed into any IOTA wallet to access your funds.
+          <br />
           <Message negative>
             <b>NO SHARING!</b> Your IOTA can be spent by <u>ANYONE</u> with your seed.
           </Message>
-          <TextArea key={'seed'} disabled style={{width:'100%', height:75}}
+          <TextArea key={'seed'} disabled style={{width:'100%', height:75, border:0}}
           value={this.state.showRawSeed ? window.wallet.seed : '#'.repeat(81)} />
           <div>
           <br />
-          <Button
+          <Button disabled={this.state.showRawSeed}
             onClick={() => {this.setState({showRawSeed:true})}}>I Understand, Show Seed</Button>
           </div>
         </div>)

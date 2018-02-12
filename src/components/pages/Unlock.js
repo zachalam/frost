@@ -68,7 +68,8 @@ class Unlock extends Component {
   render() {
     return (
       <div>
-        <img src={wallet} style={{width:'100%'}} />
+      {/* svg is larger than others, resize to 90% */}
+        <img src={wallet} style={{width:'90%'}} />
         <h1>Unlock Wallet</h1>
         Gain access to your wallet and funds by providing it here.
         <br /><br />
