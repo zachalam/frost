@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import sjcl from 'sjcl'
 
 import {
-  Container,
   Input,
   Button
 } from 'semantic-ui-react'

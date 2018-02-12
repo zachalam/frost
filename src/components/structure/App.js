@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import { Button, Form, Grid, Header, Image, Message, Segment, Icon } from 'semantic-ui-react'
+import { Grid, Segment, Icon } from 'semantic-ui-react'
 
 import Routes from './Routes'
 import logo from '../../images/frost.png'
@@ -17,7 +17,7 @@ class App extends Component {
         verticalAlign='middle'
       >
         <Grid.Column style={{maxWidth: 350}}>
-          <Link to={"/"}><img src={logo} className="App-logo" style={{width:"100%"}} /></Link>
+          <Link to={"/"}><img src={logo} className="App-logo" alt="Frost Logo" style={{width:"100%"}} /></Link>
             <Segment stacked={true} style={{padding:'2em'}}>
                 <Routes />
             </Segment>

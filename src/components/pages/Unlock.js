@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 import sjcl from 'sjcl'
 
-import { Container, Input, Label, Message, Transition, Button } from 'semantic-ui-react'
+import { Input, Message, Button } from 'semantic-ui-react'
 import wallet from '../../images/wallet.svg'
 
 import { upload } from '../../common/file'
@@ -56,7 +55,7 @@ class Unlock extends Component {
       />
       <Button color='blue' fluid size='large' loading={this.state.isLoading}
       onClick={() => { this.importWallet() }}>Open Wallet</Button>
-      <a href="#"
+      <a href="#change"
         onClick={(e) => {e.preventDefault();
         this.setState({showPassword: false, decryptFail: false})}}>import another wallet</a>
 
@@ -69,7 +68,7 @@ class Unlock extends Component {
     return (
       <div>
       {/* svg is larger than others, resize to 90% */}
-        <img src={wallet} style={{width:'90%'}} />
+        <img src={wallet} style={{width:'90%'}} alt="Unlock Wallet" />
         <h1>Unlock Wallet</h1>
         Gain access to your wallet and funds by providing it here.
         <br /><br />
@@ -78,7 +77,7 @@ class Unlock extends Component {
           this.renderPassword() :
           upload('Import Wallet', ()=> { this.setState({showPassword: true}) }, 'wallet') }
 
-        {this.state.decryptFail ? <Message warning>Invalid Decryption Password!</Message>: null}
+        {this.state.decryptFail ? <Message warning>Invalid Password!</Message>: null}
       </div>
     )
   }

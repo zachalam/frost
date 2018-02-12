@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import IOTA from 'iota.lib.js'
 import QRCode from 'qrcode.react'
-import { Container, TextArea, Message, Button, Tab } from 'semantic-ui-react'
+import { TextArea, Message, Button, Tab } from 'semantic-ui-react'
 var iota = new IOTA({});
 
 class Wallet extends Component {
