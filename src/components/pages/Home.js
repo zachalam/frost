@@ -45,7 +45,12 @@ class Home extends Component {
             trigger={<Message warning><Icon name="warning sign" />Go <u>offline</u> before using!</Message>}
             content="Protect your wallet and password from inadvertently being shared."
             inverted
-          /> : null}
+          /> :
+          <Popup
+            trigger={<Message positive><Icon name="check circle" />No Internet detected.</Message>}
+            content="Be secure. Stay offline when generating a cold wallet."
+            inverted
+          />}
       </div>
     </div>)
   }

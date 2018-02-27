@@ -52,10 +52,12 @@ npm run build
 open build/index.html
 ```
 
-## Important Notes
+## Keep Coins Secure
 * ALWAYS disconnect from the Internet when generating/accessing a key.
 * DO NOT share your encrypted wallet OR seed with anyone.
 * DO NOT SEND FUNDS FROM YOUR ADDRESS MORE THAN ONCE!!!
+
+<img src="https://media.giphy.com/media/5jUsOq78hkBY5rKfnp/giphy.gif" title="Go Offline Badge">
 
 ## Contributing
 Pull requests are more than welcome.
