@@ -31,7 +31,7 @@ class Home extends Component {
   render() {
    return (<div>
       <img src={vault} style={{width:'100%'}} alt={'IOTA Vault'} />
-      <h1>{MasterConfig.currency} Vault</h1>
+      <h1>Hello There!</h1>
       Safely store coins. <b>{MasterConfig.wallet}</b> generates and reads
       encrypted {MasterConfig.currency} wallets.
       <div style={{paddingTop:'1.5em', paddingBottom:'1em'}}>
