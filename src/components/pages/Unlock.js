@@ -70,7 +70,7 @@ class Unlock extends Component {
       {/* svg is larger than others, resize to 90% */}
         <img src={wallet} style={{width:'90%'}} alt="Unlock Wallet" />
         <h1>Unlock Wallet</h1>
-        Gain access to your wallet and funds by providing it here.
+        Gain access to your funds by importing your wallet here.
         <br /><br />
 
         {this.state.showPassword ?

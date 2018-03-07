@@ -72,7 +72,6 @@ class Wallet extends Component {
           <TextArea key={'seed'} disabled style={{width:'100%', height:75, border:0}}
           value={this.state.showRawSeed ? window.wallet.seed : '#'.repeat(81)} />
           <div>
-          <br />
           <Button disabled={this.state.showRawSeed}
             onClick={() => {this.setState({showRawSeed:true})}}>I Understand, Show Seed</Button>
           </div>
