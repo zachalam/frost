@@ -1,13 +1,15 @@
 ![Frost Logo](https://raw.githubusercontent.com/zachalam/frost/master/src/images/frost.png)
 
-FROST is an open source, cold storage wallet for IOTA. It can run offline, be compiled from source, and requires minimal dependencies. [Check out the launch article on Medium](https://medium.com/@alamzach/introducing-frost-a-secure-offline-cold-storage-wallet-for-iota-552abca7acce).
+FROST is an open source, cold storage wallet for IOTA. It runs offline, can be compiled from source, and requires minimal dependencies. 
 
-**OFFLINE USE ONLY: FROST REQUIRES YOU TO DISCONNECT FROM THE INTERNET BEFORE USING!**
+Launch Article: [Read it on Medium](https://medium.com/@alamzach/introducing-frost-a-secure-offline-cold-storage-wallet-for-iota-552abca7acce).
+
+**OFFLINE USE ONLY: FROST REQUIRES YOU TO DISCONNECT FROM THE INTERNET!**
 
 <a href="https://zachalam.github.io/frost/"><img src="https://media.giphy.com/media/l0NgSuCl5bdQr7KPS/giphy.gif" title="Frost Demo"/></a>
 
 ## Give Frost A Try!
-Short on time? Not storing a lot? Run the cold storage wallet directly in your browser. Be sure to disconnect from the Internet when generating your encrypted wallet.
+Short on time? Not storing a lot? Run the cold storage wallet directly in your browser.
 [http://frostwallet.info/](http://frostwallet.info/)
 
 ## Run Latest Build
