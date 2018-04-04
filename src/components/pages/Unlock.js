@@ -47,6 +47,7 @@ class Unlock extends Component {
       <div>
       <Input fluid
         onChange={ (e) => {this.setState({password: e.target.value})} }
+        onKeyPress={ (e) => { if(e.key === 'Enter') this.importWallet() } }
         type='password'
         icon='lock'
         iconPosition='left'
