@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import IOTA from 'iota.lib.js'
 import QRCode from 'qrcode.react'
 import { TextArea, Message, Button, Tab } from 'semantic-ui-react'
+import MasterConfig from '../../config/Master'
 var iota = new IOTA({});
 
 class Wallet extends Component {
@@ -55,7 +56,7 @@ class Wallet extends Component {
           <TextArea key={'address'} disabled style={{width:'100%', height:75, border:0}} defaultValue={this.state.address} />
           <br /><br />
           <Button
-            href={`https://iotasear.ch/hash/${this.state.address}`}
+            href={`${MasterConfig.tangleLookup}/${this.state.address}`}
             target={'_blank'}>View Balance (Online)</Button>
           </div>
         </div>)
