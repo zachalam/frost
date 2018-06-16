@@ -4,6 +4,7 @@ var config = {
   currency: 'IOTA',
   github: 'https://github.com/zachalam/frost',
   tangleLookup: 'https://thetangle.org/address',
+  donationAddress: 'TCVRROZDRWWAFSLXDXYV9XZZUNRZBMEDUTTXYPICWNQARWLBPEOKZTGOKBMTEWETKXVAREUPFOWCMFPFWOXEZUEEND',
   passLength: 10
 }
 

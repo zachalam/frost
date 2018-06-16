@@ -22,9 +22,13 @@ class App extends Component {
                 <Routes />
             </Segment>
           <div>
-            <Link to={'/donate'}><Icon name="heart" />Donate</Link>
+            <a href={`${MasterConfig.tangleLookup}/${MasterConfig.donationAddress}`} target="_blank">
+              <Icon name="heart" />Donate
+            </a>
             &nbsp; &nbsp;
-            <a href={MasterConfig.github} target="_blank"><Icon name="github" />GitHub</a>
+            <a href={MasterConfig.github} target="_blank"><Icon name="github" />
+              GitHub
+            </a>
           </div>
         </Grid.Column>
       </Grid>
