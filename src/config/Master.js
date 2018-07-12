@@ -3,7 +3,7 @@ var config = {
   version: '1.0.1',
   currency: 'IOTA',
   github: 'https://github.com/zachalam/frost',
-  tangleLookup: 'https://thetangle.org/address',
+  tangleLookup: 'https://iotasear.ch/address',
   donationAddress: 'TCVRROZDRWWAFSLXDXYV9XZZUNRZBMEDUTTXYPICWNQARWLBPEOKZTGOKBMTEWETKXVAREUPFOWCMFPFWOXEZUEEND',
   passLength: 10
 }
